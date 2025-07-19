@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "326477674546",
+    "project_id": "fomo23-4c71d",
+    "storage_bucket": "fomo23-4c71d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:326477674546:android:c4b18163e8b072cfd5242b",
+        "android_client_info": {
+          "package_name": "com.fomo23.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBJytdC200lhwq0_X67nDJbNhIzAjh-NM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

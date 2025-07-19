@@ -1,4 +1,4 @@
-package com.example.fomo23_app
+package com.fomo23.app
 
 import io.flutter.embedding.android.FlutterActivity
 

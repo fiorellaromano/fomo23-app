@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cargar Evento - FOMO23</title>
+  <script type="module">
+    // Importa Firebase
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
+
+    // Configuración del proyecto (reemplazá con la tuya)
+    const firebaseConfig = {
+      apiKey: "AIzaSyB9b7j7A8Jq8jURBkUOuI5MH7wVGZr3GNY",
+      authDomain: "fomo23-4c71d.firebaseapp.com",
+      projectId: "fomo23-4c71d",
+      storageBucket: "fomo23-4c71d.firebasestorage.app",
+      messagingSenderId: "326477674546",
+      appId: "1:326477674546:web:977e5b0bec513d94d5242b"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    window.submitEvento = async () => {
+      const titulo = document.getElementById("titulo").value;
+      const lugar = document.getElementById("lugar").value;
+      const fecha = document.getElementById("fecha").value;
+      const imagenUrl = document.getElementById("imagenUrl").value;
+      const categoria = document.getElementById("categoria").value;
+      const descripcion = document.getElementById("descripcion").value;
+
+      try {
+        await addDoc(collection(db, "eventos"), {
+          titulo,
+          lugar,
+          fecha,
+          imagenUrl,
+          categoria,
+          descripcion,
+          activo: true
+        });
+        alert("✅ Evento cargado con éxito");
+        document.getElementById("eventoForm").reset();
+      } catch (e) {
+        alert("❌ Error al cargar el evento: " + e);
+      }
+    }
+  </script>
+</head>
+<body style="font-family: sans-serif; max-width: 600px; margin: auto; padding: 1rem;">
+  <h1>Cargar Evento</h1>
+  <form id="eventoForm" onsubmit="event.preventDefault(); submitEvento();">
+    <label>Título:<br><input type="text" id="titulo" required></label><br><br>
+    <label>Lugar:<br><input type="text" id="lugar" required></label><br><br>
+    <label>Fecha:<br><input type="date" id="fecha" required></label><br><br>
+    <label>Imagen URL:<br><input type="url" id="imagenUrl" required></label><br><br>
+    <label>Categoría:<br><input type="text" id="categoria" required></label><br><br>
+    <label>Descripción:<br><textarea id="descripcion" rows="4" required></textarea></label><br><br>
+    <button type="submit">Cargar evento</button>
+  </form>
+</body>
+</html>

@@ -1,16 +1,20 @@
-# fomo23_app
+# FOMO23 App 🎉
 
-A new Flutter project.
+Aplicación móvil para descubrir eventos culturales, artísticos y sociales en Uruguay.  
+Basada en la curaduría de contenidos de la cuenta de Instagram [@fomo23.uy](https://instagram.com/fomo23.uy)
 
-## Getting Started
+## Funcionalidades previstas (MVP)
+- Ver eventos con imagen, título, fecha y lugar
+- Filtrar por categoría, lugar y fecha
+- Link directo al evento en Instagram u otras plataformas
 
-This project is a starting point for a Flutter application.
+## Stack tecnológico
+- Flutter (Android por ahora)
+- Firebase / JSON / Airtable (a definir como backend)
+- Diseño mobile-first
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+📄 **Licencia**
+Este proyecto está protegido por derechos de autor (All Rights Reserved).  
+No se permite su uso, copia ni distribución sin autorización escrita de la autora.
